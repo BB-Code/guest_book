@@ -1,10 +1,13 @@
 language: node_js
+node_js:
+  - 14
 stages:
   - install
   - run
 script: true
 jobs:
   - stage: "install"
-    script: npm index
-  - stage: "install"
+    before_script: 
+      - npm install
+  - stage: "run"
     script: npm run dev
