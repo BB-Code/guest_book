@@ -6,8 +6,6 @@ stages:
   - run
 script: true
 jobs:
-  - stage: "install"
-    before_script: 
-      - npm install -g pm2
-  - stage: "run"
+  - stage: "install & run"
+    before_script: npm install -g pm2
     script: pm2 start app.js
