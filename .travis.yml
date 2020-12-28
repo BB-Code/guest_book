@@ -1,0 +1,10 @@
+language: node_js
+stages:
+  - install
+  - run
+script: true
+jobs:
+  - stage: "install"
+    script: npm index
+  - stage: "install"
+    script: npm run dev
