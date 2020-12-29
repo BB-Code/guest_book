@@ -10,6 +10,6 @@ jobs:
   - stage: "install & run"
     script: 
       - npm install
-      - istanbul cover ./node_modules/mocha/bin/_mocha --reporter test -- -R spec
+      - npm run cover
     after_success:
       - bash <(curl -s https://codecov.io/bash)
