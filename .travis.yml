@@ -8,7 +8,7 @@ stages:
   - run
 jobs:
   - stage: "install & run"
-    before_script: npm install -g pm2 codecov
+    before_script: npm install -g pm2 codecov istanbul mocha
     script: 
       - istanbul cover ./node_modules/mocha/bin/_mocha --reporter lcovonly -- -R spec
       - codecov
