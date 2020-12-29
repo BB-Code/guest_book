@@ -9,7 +9,7 @@ stages:
 jobs:
   - stage: "install & run"
     script: 
-      - npm install codecov istanbul mocha supertest unit.js -D
+      - npm install
       - istanbul cover ./node_modules/mocha/bin/_mocha --reporter lcovonly -- -R spec
       - codecov
     after_success:
