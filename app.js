@@ -11,3 +11,4 @@ app.get('/',(req,res)=>{
 app.listen(3636,()=>{
     console.log(`Server is running at port 3636`);
 });
+module.exports = app
