@@ -11,6 +11,5 @@ jobs:
     script: 
       - npm install
       - istanbul cover ./node_modules/mocha/bin/_mocha --reporter test -- -R spec
-      - codecov
     after_success:
       - bash <(curl -s https://codecov.io/bash)
