@@ -1,10 +1,11 @@
 language: node_js
+env:
+  version:  1.0.0
 node_js:
   - 14
 stages:
   - install
   - run
-script: true
 jobs:
   - stage: "install & run"
     before_script: npm install -g pm2
